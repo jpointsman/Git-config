@@ -19,3 +19,12 @@ git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
 
 cat .git/config
 cat .git/HEAD
+
+git remote add bitbucket git@bitbucket.org:ElvisByte/new-repo.git
+git remote add bitbucket https://ElvisByte@bitbucket.org/ElvisByte/new-repo
+
+git remote add origin git@github.com:ElvisByte/new-repo.git
+git remote add origin https://github.com/ElvisByte/new-repo.git
+
+git remote | xargs -l git push --all #Linux
+git remote | xargs -L1 git push --all #OSX
