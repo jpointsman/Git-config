@@ -1,0 +1,21 @@
+git branch --track deploy heroku/master
+git reset --hard <hash>
+git commit --amend -m "Add an author/email comment"
+
+git push --all
+git push --tags
+
+git init --bare
+
+
+git revert HEAD --no-edit
+
+git hist master --all
+git hist --max-count=1
+
+git log --pretty=oneline
+git log --all --pretty=format:"%h %cd %s (%an)" --since='7 days ago'
+git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short
+
+cat .git/config
+cat .git/HEAD
